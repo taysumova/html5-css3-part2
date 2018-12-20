@@ -15,7 +15,7 @@ html {
 .container {
     font-family: Montserrat;
     margin: 0 auto;
-    width: 1920px;
+    max-width: 1920px;
 }
 
 .header-slider {
@@ -25,18 +25,23 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
 }
 
 .header-slider__header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 374px;
+    width: 100%;
 }
 
 .header-slider__header ul {
     display: flex;
     list-style-type: none;
+}
+
+.header-slider__header li {
+    padding: 20px 15px;
 }
 
 .header-slider__header li a {
@@ -54,13 +59,11 @@ html {
 }
 
 .cart {
-    background-image: url(../svg/icon-cart.svg);
     width: 24px;
     height: 24px;
 }
 
 .search {
-    background: url(../svg/icon-search.svg);
     width: 24px;
     height: 24px;
 }
@@ -143,6 +146,11 @@ html {
     align-items: center;
     justify-content: center;
     background: url(../img/iPhone%20in%20hand.png) no-repeat;
+}
+
+.mobile__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .statistics {

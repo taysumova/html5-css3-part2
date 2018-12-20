@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700");
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+.container {
+    font-family: Montserrat;
+    margin: 0 auto;
+    width: 1920px;
+}
+
+.header-slider {
+    background-image: url(../img/slider-bg.jpg);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.header-slider__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-slider__header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.header-slider__header li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-slider__header li a:hover {
+    color: #c7b29a;
+}
+
+.header-slider__content a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cart {
+    background-image: url(../svg/icon-cart.svg);
+    width: 24px;
+    height: 24px;
+}
+
+.search {
+    background: url(../svg/icon-search.svg);
+    width: 24px;
+    height: 24px;
+}
+
+.header-slider__main {
+    display: flex;
+}
+
+.header-slider__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    color: #8c8c8c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__services {
+    display: flex;
+    justify-content: center;
+}
+
+.about__content {
+    background-color: #fbfaf8;
+    text-align: center;
+}
+
+.purchase {
+    background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-projects {
+    color: #8c8c8c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.latest-projects__nav {
+    align-items: center;
+}
+
+.latest-projects__nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.latest-projects__nav a {
+    color:  #8c8c8c;
+    text-decoration: none;
+}
+
+.latest-projects__projects-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video {
+/*    color: #ffffff;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile {
+    background-color: #fbfaf8;
+    color: #8c8c8c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/iPhone%20in%20hand.png) no-repeat;
+}
+
+.statistics {
+    background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+    color: #c7b299;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statistics figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*    To make mixin with parametr column or row*/
+}
+
+.statistics figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-posts {
+    color: #8c8c8c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-posts__posts-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners {
+    background: url(../img/footer-bg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    background-color: #191919;
+    color:  #545454;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom {
+    background-color: #111111;
+    color: #545454;
+    display: flex;
+}
+
+.footer-bottom__nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.footer-bottom__info {
+    display: flex;
+}

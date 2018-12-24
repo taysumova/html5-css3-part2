@@ -63,6 +63,14 @@ body {
     padding-top: 40px;
 }
 
+.logo-svg {
+    font-size: 34px;
+    font-family: raleway, sans-serif;
+    fill: rgb(255,255,255);
+    width: 181px;
+    height: 56px;git branch 
+}
+
 .header-slider__header nav {
     margin-left: 204px;
 }
@@ -323,9 +331,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
-
-
 
 .latest-projects {
     color: #8c8c8c;

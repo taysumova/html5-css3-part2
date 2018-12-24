@@ -1,5 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700");
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/montserrat-regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(../fonts/montserrat-light.ttf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway-regular.ttf);
+}
+
+@font-face {
+    font-family: raleway-medium;
+    src: url(../fonts/raleway-medium.ttf);
+}
+
+@font-face {
+    font-family: raleway-semibold;
+    src: url(../fonts/raleway-semibold.ttf);
+}
+
+@font-face {
+    font-family: raleway-bold;
+    src: url(../fonts/raleway-bold.ttf)
+}
 
 * {
     box-sizing: border-box;
@@ -14,7 +41,7 @@ body {
 }
 
 .container {
-    font-family: Montserrat;
+    font-family: montserrat;
     margin: 0 auto;
     width: 1920px;
 }
@@ -90,6 +117,8 @@ body {
     transition: width 0.3s ease-out;
     background-position: left;
     color: #fff;
+    border: 1px solid #998675;
+    outline: none;
 }
 
 .header-slider__main {
@@ -108,20 +137,17 @@ body {
 
 .header-slider__content span {
     font-size: 36px;
-    font-weight: 500;
-    font-family: "Raleway", sans-serif;
+    font-family: raleway-medium, sans-serif;
 }
 
 .header-slider__content h1 {
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
+    font-family: raleway-bold, sans-serif;
     font-size: 52px;
 }
 
 .header-slider__content p {
-    font-family: Montserrat, sans-serif;
+    font-family: montserrat-light, sans-serif;
     font-size: 16px;
-    font-weight: 300;
     line-height: 24px;
     margin-top: 9px;
     text-align: center;
@@ -132,9 +158,8 @@ body {
 .header-slider__content a {
     border-radius: 3px;
     background-color: #998675;
-    font-family: Raleway;
+    font-family: raleway-bold;
     font-size: 14px;
-    font-weight: 700;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -146,7 +171,7 @@ body {
 }
 
 .header-slider__content a:hover {
-    border: solid 1px #998675;
+    border: 1px solid #998675;
     background-color: #fff;
     color: #998675;
 }
@@ -207,17 +232,86 @@ body {
     color: #8c8c8c;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .about__services {
+    align-items: center;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
+.about__service {
+    display: block;
+    text-decoration: none;
+    margin: 80px 17px;
+    width: 271px;
+}
+
+.about__service:hover:after {
+    border-bottom: 3px solid #deb887;
+}
+
+.about__service:hover h4 {
+    color: #c7b299;
+}
+
+.about__service:hover .service-icon {
+    fill: #c7b299;
+}
+
+.about__service:after {
+    border-bottom: 3px solid #f1eee9;
+    content: "";
+    display: inline-block;
+    height: 33px;
+    width: 70px;
+}
+
+.service-icon {
+    fill: #555;
+    margin-bottom: 19px;
+    height: 49px;
+    width: 49px;
+}
+
+.about__service h4 {
+    color: #555;
+    font-family: raleway-semibold, sans-serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.about__service p {
+    font-size: 14px;
+    font-family: montserrat-light, sans-serif;
+    line-height: 24px;
+    color: #8c8c8c;
+}
+
+/*на следующее занятие*/
+
 .about__content {
+    align-items: center;
     background-color: #fbfaf8;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    padding-top: 83px;
+}
+
+.about__content h3 {
+    font-family: raleway-semibold, sans-serif;
+    color:  #555;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.about__content p {
+    font-size: 16px;
+    font-family: montserrat-light, sans-serif;
+    line-height: 28px;
+    width: 757px;
 }
 
 .purchase {
@@ -229,6 +323,9 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
+
 
 .latest-projects {
     color: #8c8c8c;

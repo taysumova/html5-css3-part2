@@ -44,16 +44,8 @@
     padding: 0;
 }
 
-html,
-body {
-    font-size: 14px;
-    width: 100%;
-}
-
 .container {
     font-family: montserrat;
-    margin: 0 auto;
-    width: 1920px;
 }
 
 .header-slider {
@@ -69,6 +61,7 @@ body {
 
 .header-slider01 {
     background: url(../img/slider01.jpg) no-repeat;
+    background-size: cover;
 }
 
 .header-slider02 {
@@ -94,8 +87,14 @@ body {
 .header-slider__header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 40px;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin-right: 5%;
 }
 
 .logo-svg {
@@ -114,30 +113,54 @@ body {
     fill: orange;
 }
 
-.header-slider__header nav {
-    margin-left: 204px;
+.header-slider__header {
+    display: flex;
+    justify-content: center;
 }
 
-.header-slider__header ul {
+label,
+#menu {
+    display: none;
+}
+
+.menu {
+    margin-left: 5.6%;
+}
+
+.menu ul {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
-.header-slider__header li {
+.menu li {
     padding: 20px 15px;
 }
 
-.header-slider__header li a {
+.menu li a {
+    display: block;
     color: #ffffff;
     text-decoration: none;
 }
 
-.header-slider__header li a:hover {
+.menu li a:hover {
     color: #c7b29a;
 }
 
-.header-slider__header li a:active {
+.menu li a:active {
     color: orange;
+}
+
+.menu__closed {
+    background-color: #fff;
+    display: block;
+    margin: 6px 0;
+    width: 47px;
+    height: 6px;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
 }
 
 .cart {
@@ -145,7 +168,7 @@ body {
     height: 24px;
     border: none;
     background: none;
-    margin-left: 63px;
+    margin-left: 3.3%;
 }
 
 .cart__cart-svg {
@@ -165,7 +188,7 @@ body {
     width: 224px;
     height: 24px;
     border: none;
-    margin-left: 28px;
+    margin-left: 0.7%;
     cursor: pointer;
 }
 
@@ -998,6 +1021,7 @@ body {
 
 .partners {
     background: url(../img/footer-bg.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1198,10 +1222,30 @@ body {
     color: darkorange;
 }
 
-
-@media screen and (max-width: 750px) {
-  .container {
-    font-size: 10px;
-    width: 700px;
+/*755px*/
+@media screen and (max-width: 1055px) {
     
-  }
+    .header-slider__main,
+    .header-slider__buttons,
+    .cart,
+    .search,
+    .about__content-wrapper,
+    .purchase,
+    .statistics,
+    .footer-content {
+        display: none;
+    }
+    
+    .header-slider {
+        height: 105px;
+    }
+    
+    label {
+        display: block;
+    }
+
+    .menu {
+        visibility: hidden;
+        width: 40%;
+    }
+}

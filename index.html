@@ -25,7 +25,13 @@
                             <use xlink:href="#logo-text" />
                         </svg>
                     </a>
-                    <nav>
+                    <label for="menu">
+                        <span class="menu__closed"></span>
+                        <span class="menu__closed"></span>
+                        <span class="menu__closed"></span>
+                    </label>
+                    <input id="menu" type="checkbox" >
+                    <nav class="menu">
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
@@ -421,7 +427,7 @@
             $(".video").addClass('video-on');
             $(".video-play").addClass('video-play-on');
         });
-        /*нужно добавить параметры к функции и сократить код ниже*/
+        
         $("#slider01").click(function() {
             $(".header-slider").removeClass('header-slider02 header-slider03 header-slider04 header-slider05').addClass('header-slider01');
         });

@@ -58,7 +58,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between; 
-    height: 1024px;
+    height: 100vh;
+    max-height: 1024px;
 }
 
 .header-slider01 {
@@ -91,14 +92,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 2.083% 0;
+    padding: 2.083% 0.5%;
     width: 100%;
     position: relative;
 }
 
 .logo {
     display: block;
-    margin-right: 5.19%;
+/*    margin-right: 4.19%;*/
+    width: 15%;
 }
 
 .logo-svg {
@@ -122,12 +124,14 @@ label,
 }
 
 .menu {
-      margin: 0 3.28% 0 5.19%;
+/*    margin: 0 3.28% 0 4.19%;*/
 /*    min-width: 637px;*/
+    width: 65%;
 }
 
 .menu ul {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     width: 100%;
@@ -169,6 +173,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .header-slider__button-wrapper {
     display: flex;
+    width: 8%;
 }
 
 .cart {
@@ -194,7 +199,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .search {
     border: 1px solid transparent;
-    margin-left: 17.67%;
+    margin-left: 47.67%;
     cursor: pointer;
     position: relative;
     outline: none;
@@ -307,7 +312,7 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 .header-slider__buttons {
-    margin-bottom: 50px;
+    margin-bottom: 2.5%;
 }
 
 .header-slider__button {
@@ -1225,6 +1230,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .footer-bottom__wrapper {
     display: flex;
+    flex-wrap: wrap;
     margin-right: 11.3854%;
     margin-left: 1%;
 }
@@ -1266,6 +1272,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .footer-bottom__info {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 11%;
     margin-right: 1%;
 }
@@ -1284,7 +1291,7 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 /*433 прокрутка появляется*/
-@media screen and (max-width: 853px) {
+@media screen and (max-width: 823px) {
     
     .header-slider__main,
     .header-slider__buttons,
@@ -1311,7 +1318,7 @@ input[type="checkbox"]:checked ~ .logo {
     .menu {
         visibility: hidden;
         width: 50%;
-        margin-left: -4%;
+/*        margin-left: -1%;*/
 
     }
     
@@ -1321,6 +1328,24 @@ input[type="checkbox"]:checked ~ .logo {
         font-size: 14px;
     }
 }
+
+/*
+@media screen and (max-width: 444px) {
+    
+    .menu {
+    visibility: hidden;
+    width: 80%;
+    margin-left: -7%;
+    position: absolute;
+    }
+    
+    input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
+    opacity: 0.97;
+    background: #555;
+    }
+}
+*/
 
 /*
 @media screen and (max-width: 444px) {

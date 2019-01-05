@@ -122,12 +122,13 @@ label,
 }
 
 .menu {
-    margin: 0 3.28% 0 5.19%; 
+      margin: 0 3.28% 0 5.19%;
 /*    min-width: 637px;*/
 }
 
 .menu ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     width: 100%;
 }
@@ -162,6 +163,14 @@ input[type="checkbox"]:checked ~ .menu {
     visibility: visible;
 }
 
+input[type="checkbox"]:checked ~ .logo {
+    visibility: none;
+}
+
+.header-slider__button-wrapper {
+    display: flex;
+}
+
 .cart {
     width: 1.25%;
     height: 24px;
@@ -185,13 +194,14 @@ input[type="checkbox"]:checked ~ .menu {
 
 .search {
     border: 1px solid transparent;
-    margin-left: 13.67%;
+    margin-left: 17.67%;
     cursor: pointer;
     position: relative;
     outline: none;
     width: 1.25%;
     height: 24px;
 }
+
 
 .search[type="search"] {
     background: none;
@@ -208,6 +218,7 @@ input[type="checkbox"]:checked ~ .menu {
     border-radius: 17%;
     color: #fff;
 }
+
 
 .header-slider__main {
     align-items: center;
@@ -534,6 +545,8 @@ input[type="checkbox"]:checked ~ .menu {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 8.0%;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .latest-projects__project {
@@ -1212,8 +1225,6 @@ input[type="checkbox"]:checked ~ .menu {
 
 .footer-bottom__wrapper {
     display: flex;
-    min-width: 416px;
-    width: 39.8854%;
     margin-right: 11.3854%;
     margin-left: 1%;
 }
@@ -1257,8 +1268,6 @@ input[type="checkbox"]:checked ~ .menu {
     display: flex;
     margin-left: 11%;
     margin-right: 1%;
-    min-width: 335px;
-    width: 18.67%;
 }
 
 .footer-bottom__info p {
@@ -1274,7 +1283,8 @@ input[type="checkbox"]:checked ~ .menu {
     color: darkorange;
 }
 
-@media screen and (max-width: 755px) {
+/*433 прокрутка появляется*/
+@media screen and (max-width: 853px) {
     
     .header-slider__main,
     .header-slider__buttons,
@@ -1288,7 +1298,7 @@ input[type="checkbox"]:checked ~ .menu {
     }
     
     .header-slider {
-        height: 105px;
+        height: auto;
     }
     
     label {
@@ -1311,3 +1321,22 @@ input[type="checkbox"]:checked ~ .menu {
         font-size: 14px;
     }
 }
+
+/*
+@media screen and (max-width: 444px) {
+    
+    .menu {
+    visibility: hidden;
+    width: 80%;
+    margin-left: -7%;
+    position: absolute;
+    }
+    
+    input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
+    opacity: 0.97;
+    background: #555;
+    }
+}
+*/
+

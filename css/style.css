@@ -88,15 +88,17 @@
 
 .header-slider__header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 40px;
-    width: 79.0625%;
+    justify-content: center;
+    padding: 2.083% 0;
+    width: 100%;
+    position: relative;
 }
 
 .logo {
     display: block;
-    margin-right: 5%;
+    margin-right: 5.19%;
 }
 
 .logo-svg {
@@ -114,28 +116,24 @@
     fill: orange;
 }
 
-.header-slider__header {
-    display: flex;
-    justify-content: center;
-}
-
 label,
 #menu {
     display: none;
 }
 
 .menu {
-    margin-left: 5.6%;
+    margin: 0 3.28% 0 5.19%; 
+/*    min-width: 637px;*/
 }
 
 .menu ul {
     display: flex;
     list-style-type: none;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .menu li {
-    padding: 20px 15px;
+    padding: 3.1397% 2.355%;
 }
 
 .menu li a {
@@ -165,11 +163,11 @@ input[type="checkbox"]:checked ~ .menu {
 }
 
 .cart {
-    width: 24px;
+    width: 1.25%;
     height: 24px;
     border: none;
+    outline: none;
     background: none;
-    margin-left: 3.3%;
 }
 
 .cart__cart-svg {
@@ -186,11 +184,13 @@ input[type="checkbox"]:checked ~ .menu {
 }
 
 .search {
-    width: 224px;
-    height: 24px;
-    border: none;
-    margin-left: 0.7%;
+    border: 1px solid transparent;
+    margin-left: 13.67%;
     cursor: pointer;
+    position: relative;
+    outline: none;
+    width: 1.25%;
+    height: 24px;
 }
 
 .search[type="search"] {
@@ -204,9 +204,9 @@ input[type="checkbox"]:checked ~ .menu {
 .search[type="search"]:focus {
     transition: width 0.3s ease-out;
     background-position: left;
-    color: #fff;
     border: 1px solid #998675;
-    outline: none;
+    border-radius: 17%;
+    color: #fff;
 }
 
 .header-slider__main {
@@ -340,12 +340,13 @@ input[type="checkbox"]:checked ~ .menu {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 
 .about__service {
     display: block;
     text-decoration: none;
-    margin: 80px 17px;
+    margin: 4.16% 0.8854%;
     width: 271px;
 }
 
@@ -475,7 +476,7 @@ input[type="checkbox"]:checked ~ .menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4.16% 17.9%;
+    padding: 4.16% 0;
     width: 100%;
 }
 
@@ -489,7 +490,7 @@ input[type="checkbox"]:checked ~ .menu {
     font-family: montserrat-light, sans-serif;
     font-size: 16px;
     line-height: 28px;
-    width: 75.227%;
+    width: 42.227%;
     text-align: center;
     margin: 1.25% 0 2.08%;
 }
@@ -514,6 +515,7 @@ input[type="checkbox"]:checked ~ .menu {
 .latest-projects__nav a {
     border: 2px solid #ebecec;
     border-radius: 3px;
+    color: #8c8c8c;
     display: block;
     font-family: montserrat-light, sans-serif;
     font-size: 14px;
@@ -531,7 +533,7 @@ input[type="checkbox"]:checked ~ .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1005;
+    margin: 0 8.0%;
 }
 
 .latest-projects__project {
@@ -748,21 +750,22 @@ input[type="checkbox"]:checked ~ .menu {
     background-color: #fbfaf8;
     color: #8c8c8c;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 4.11% 20.05% 0;
+    padding: 4.11% 0 0;
     width: 100%;
 }
 
 .mobile img {
-    margin: 0 auto;
+    
 }
 
 .mobile__content {
     display: flex;
     flex-direction: column;
-    margin-left: 31px;
+    margin-left: 1.614%;
     padding-top: 6.04%;
-    width: 54.63%;
+    width: 35.63%;
 }
 
 .mobile__content h2 {
@@ -770,7 +773,7 @@ input[type="checkbox"]:checked ~ .menu {
     font-weight: 700;
     font-size: 30px;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 4.386%;
 }
 
 .mobile__content p,
@@ -782,11 +785,11 @@ input[type="checkbox"]:checked ~ .menu {
 
 .mobile__content p {
     line-height: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 5.84%;
 }
 
 .mobile__content ul {
-    padding-left: 100px;
+    padding-left: 14.61%;
 }
 
 .mobile__content li {
@@ -884,7 +887,7 @@ input[type="checkbox"]:checked ~ .menu {
     line-height: 28px;
     margin: 25px 0 20px;
     text-align: center;
-    width: 80%;
+    width: 39.42%;
 }
 
 .recent-posts__posts-wrapper {
@@ -892,14 +895,14 @@ input[type="checkbox"]:checked ~ .menu {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
     
 }
 
 .recent-posts__post {
     margin: 1.5%;
     position: relative;
-    width: 31.6239%;
-    min-width: 370px;
+    width: 370px;
 }
 
 .recent-posts__post:hover:before {
@@ -1290,10 +1293,21 @@ input[type="checkbox"]:checked ~ .menu {
     
     label {
         display: block;
+        position: absolute;
+        top: 30%;
+        right: 3%;
     }
 
     .menu {
         visibility: hidden;
-        width: 40%;
+        width: 50%;
+        margin-left: -4%;
+
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+/*        font-size: 14px; заменить на rem */
+        font-size: 14px;
     }
 }

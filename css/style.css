@@ -44,10 +44,14 @@
     padding: 0;
 }
 
+html {
+    font-size: 16px;
+}
+
 .container {
     font-family: montserrat;
     max-width: 1920px;
-    min-width: 300px;
+    min-width: 400px;
     margin: 0 auto;
 }
 
@@ -60,6 +64,7 @@
     align-items: center;
     justify-content: space-between; 
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     max-height: 1024px;
 }
 
@@ -100,13 +105,12 @@
 
 .logo {
     display: block;
-/*    margin-right: 4.19%;*/
     width: 15%;
 }
 
 .logo-svg {
-    font-size: 34px;
     font-family: raleway, sans-serif;
+    font-size: 34px;
     fill: rgb(255, 255, 255);
     height: 56px;
 }
@@ -125,8 +129,6 @@ label,
 }
 
 .menu {
-/*    margin: 0 3.28% 0 4.19%;*/
-/*    min-width: 637px;*/
     width: 65%;
 }
 
@@ -208,7 +210,6 @@ input[type="checkbox"]:checked ~ .logo {
     height: 24px;
 }
 
-
 .search[type="search"] {
     background: none;
     background-image: url(../svg/icon-search.svg);
@@ -217,6 +218,7 @@ input[type="checkbox"]:checked ~ .logo {
     padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
+/*
 .search[type="search"]:focus {
     transition: width 0.3s ease-out;
     background-position: left;
@@ -224,6 +226,7 @@ input[type="checkbox"]:checked ~ .logo {
     border-radius: 17%;
     color: #fff;
 }
+*/
 
 
 .header-slider__main {
@@ -452,6 +455,10 @@ input[type="checkbox"]:checked ~ .logo {
     width: 100%;
 }
 
+.purchase__text {
+    width: 50%;
+}
+
 .purchase__text h2 {
     font-family: raleway, sans-serif;
     font-size: 28px;
@@ -501,13 +508,13 @@ input[type="checkbox"]:checked ~ .logo {
 
 .latest-projects h2 {
     font-family: raleway-semibold;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #555;
 }
 
 .latest-projects p {
     font-family: montserrat-light, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 28px;
     width: 42.227%;
     text-align: center;
@@ -682,6 +689,7 @@ input[type="checkbox"]:checked ~ .logo {
     position: relative;
     width: 100%;
     height: 80vh;
+    height: calc(var(--vh, 1vh) * 80);
     max-height: 705px;
     overflow: hidden;
 }
@@ -696,15 +704,12 @@ input[type="checkbox"]:checked ~ .logo {
     height: 100%;
 }
 
-
 .video-play-on {
     display: block;
     max-height: 100%;
-    height: 100%;
     max-width: 100%;
     min-height: 350px;
 }
-
 
 .video__button {
     border-radius: 50%;
@@ -713,9 +718,8 @@ input[type="checkbox"]:checked ~ .logo {
     cursor: pointer;
     outline: none;
     position: absolute;
-    top: 210px;
+    top: 25%;
     left: 47%;
-/*    40%*/
     height: 100px;
     width: 100px;
     z-index: 1;
@@ -760,15 +764,15 @@ input[type="checkbox"]:checked ~ .logo {
 .video__poster-content h3 {
     font-family: raleway-medium, sans-serif;
     font-weight: 500;
-    font-size: 30px;
-    margin: 354px 0 15px;
+    font-size: 1.875rem;
+    margin: 20% 0 1%;
 }
 
 .video__poster-content p {
     font-family: montserrat-light, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 1.75rem;
     margin-bottom: 36px;
     margin: 0 35.625%;
 }
@@ -811,7 +815,7 @@ input[type="checkbox"]:checked ~ .logo {
 .mobile__content h2 {
     font-family: raleway-semibold, sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #555;
     margin-bottom: 4.386%;
 }
@@ -820,11 +824,11 @@ input[type="checkbox"]:checked ~ .logo {
 .mobile__content li {
     font-family: montserrat-light, sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .mobile__content p {
-    line-height: 28px;
+    line-height: 1.75rem;
     margin-bottom: 5.84%;
 }
 
@@ -833,7 +837,7 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 .mobile__content li {
-    line-height: 32px;
+    line-height: 2rem;
     position: relative;
     list-style-type: none;
 }
@@ -915,16 +919,16 @@ input[type="checkbox"]:checked ~ .logo {
 .recent-posts h2 {
     font-family: raleway-bold, sans-serif;
     color: #555555;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 600;
 }
 
 .recent-posts p {
     font-family: montserrat-light;
     color: #8c8c8c;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 1.75rem;
     margin: 25px 0 20px;
     text-align: center;
     width: 39.42%;
@@ -1313,6 +1317,9 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 @media screen and (max-width: 823px) {
+    html {
+        font-size: 14px;    
+    }
     
     .header-slider__main,
     .header-slider__buttons,
@@ -1340,13 +1347,11 @@ input[type="checkbox"]:checked ~ .logo {
         visibility: hidden;
         width: 80%;
         margin-left: -20%;
-
     }
     
     .menu ul {
         background: url(../img/slider01.jpg);
         flex-wrap: wrap;
-/*        font-size: 14px; заменить на rem */
         font-size: 14px;
     }
     
@@ -1380,6 +1385,14 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 @media screen and (max-width: 450px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .purchase__button {
+        line-height: 25px;
+    }
+    
     .video__button {
         height: 70px;
         width: 70px;
@@ -1392,13 +1405,10 @@ input[type="checkbox"]:checked ~ .logo {
     
     .video__poster-content h3 {
         margin: 124px 0 15px;
-        font-size: 26px;
     }
     
     .video__poster-content p  {
         margin: 0 10.625%;
-        font-size: 14px;
-        line-height: 26px;
     }
     
     .mobile img {
@@ -1408,16 +1418,10 @@ input[type="checkbox"]:checked ~ .logo {
     
     .mobile__content {
         width: 100%;
-        font-size: 14px;
-    }
-    
-    .mobile__content h2 {
-        font-size: 26px;
     }
     
     .mobile__content p {
         margin-bottom: 1.84%;
     }
-    
 }
 

@@ -413,54 +413,12 @@
             </section>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var video = document.querySelector("#video"),
-            button = document.querySelector(".video__button");
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
 
-        button.addEventListener("click", function() {
-            video.play()
-            video.setAttribute("controls", "controls");
-        }, false);
-
-        $(".video__button").click(function() {
-            $(".video__button").addClass('video-play__btn-hide');
-            $(".video__poster-content").addClass('video__poster-content-hide');
-            $(".video").addClass('video-on');
-            $(".video-play").addClass('video-play-on');
-        });
-        
-        
-        $("#prev_slider").click(function() {
-            $(".header-slider").removeClass('header-slider02 header-slider03 header-slider04 header-slider05').addClass('header-slider01');
-        });
-        
-        $("#next_slider").click(function() {
-            $(".header-slider").removeClass('header-slider01 header-slider03 header-slider04 header-slider05').addClass('header-slider02');
-        });
-        
-        
-        
-        $("#slider01").click(function() {
-            $(".header-slider").removeClass('header-slider02 header-slider03 header-slider04 header-slider05').addClass('header-slider01');
-        });
-         $("#slider02").click(function() {
-            $(".header-slider").removeClass('header-slider01 header-slider03 header-slider04 header-slider05').addClass('header-slider02');
-        });
-        $("#slider03").click(function() {
-            $(".header-slider").removeClass('header-slider01 header-slider02 header-slider04 header-slider05').addClass('header-slider03');
-        });
-        $("#slider04").click(function() {
-            $(".header-slider").removeClass('header-slider01 header-slider03 header-slider02 header-slider05').addClass('header-slider04');
-        });
-        $("#slider05").click(function() {
-            $(".header-slider").removeClass('header-slider01 header-slider02 header-slider03 header-slider04').addClass('header-slider05');
-        });
-    </script>
-    <script>
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    </script>
+   <script src='js/main.js'></script>
 </body>
 
 </html>

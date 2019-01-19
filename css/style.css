@@ -176,6 +176,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .header-slider__button-wrapper {
     display: flex;
+    position: relative;
     width: 8%;
 }
 
@@ -225,6 +226,9 @@ input[type="checkbox"]:checked ~ .logo {
     border: 1px solid #998675;
     border-radius: 17%;
     color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 */
 
@@ -340,7 +344,8 @@ input[type="checkbox"]:checked ~ .logo {
     margin: 2px;
 }
 
-.header-slider__button:active {
+.header-slider__button:active,
+.header-slider__button-active {
     border: 2px solid orange;
     background-color: rgba(255, 255, 255, 0);
     width: 15px;

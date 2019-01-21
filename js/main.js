@@ -19,52 +19,98 @@ $(document).ready(function () {
         $(".video").addClass('video-on');
         $(".video-play").addClass('video-play-on');
     });
+    
+    // для мобильного меню
+    $('#menu').click(function() {
+        $('.menu__closed').toggle();
+        $('.menu__opened').toggleClass('visible');
+    });
 
 
     // слайдер
-    var i = 2;
-    $("#next_slider").click(function () {
-        var j = i;
-        $(".header-slider").addClass('header-slider0' + i);
-        if (i < 5) {
-            i++;
+    var sliderNum = 1; //переменная для номера слайдера
+
+    //функция для проверки номера слайдера
+    function checkSliderNum(sliderNum) {
+        switch (sliderNum) {
+            case 1:
+                slider01();
+                break;
+            case 2:
+                slider02();
+                break;
+            case 3:
+                slider03();
+                break;
+            case 4:
+                slider04();
+                break;
+            case 5:
+                slider05();
+                break;
         }
-        $('#prev_slider').click(function () {
-            $(".header-slider").removeClass('header-slider0' + j);
-            if (j > 1 && j <= 5) {
-                j--;
-                if (i > 1) {
-                    i--;
-                }
-            }
-            $(".header-slider").addClass('header-slider0' + j);
-        });
+    }
+
+    //для удаления класса active для кнопки
+    function removeActiveBtn() {
+        $('.header-slider__button').removeClass('header-slider__button-active');
+    }
+
+    $("#next_slider").click(function () {
+        if (sliderNum < 5) {
+            sliderNum++;
+        }
+        checkSliderNum(sliderNum);
+    });
+
+    $('#prev_slider').click(function () {
+        if (sliderNum > 1) {
+            sliderNum--;
+        }
+        checkSliderNum(sliderNum);
     });
 
 
-
-    //кнопки слайдера 
-    $("#slider01").click(function () {
+    function slider01() {
+        sliderNum = 1;
         $(".header-slider").removeClass('header-slider02 header-slider03 header-slider04 header-slider05').addClass('header-slider01');
-    });
-    $("#slider02").click(function () {
+        removeActiveBtn();
+        $('#slider01').addClass('header-slider__button-active');
+    }
+
+    function slider02() {
+        sliderNum = 2;
         $(".header-slider").removeClass('header-slider01 header-slider03 header-slider04 header-slider05').addClass('header-slider02');
-    });
-    $("#slider03").click(function () {
+        removeActiveBtn();
+        $('#slider02').addClass('header-slider__button-active');
+    }
+
+    function slider03() {
+        sliderNum = 3;
         $(".header-slider").removeClass('header-slider01 header-slider02 header-slider04 header-slider05').addClass('header-slider03');
-    });
-    $("#slider04").click(function () {
+        removeActiveBtn();
+        $('#slider03').addClass('header-slider__button-active');
+    }
+
+    function slider04() {
+        sliderNum = 4;
         $(".header-slider").removeClass('header-slider01 header-slider03 header-slider02 header-slider05').addClass('header-slider04');
-    });
-    $("#slider05").click(function () {
-        $(".header-slider").removeClass('header-slider01 header-slider02 header-slider03 header-slider04').addClass('header-slider05');
-    });
+        removeActiveBtn();
+        $('#slider04').addClass('header-slider__button-active');
+    }
+
+    function slider05() {
+        sliderNum = 5;
+        $(".header-slider").removeClass('header-slider01 header-slider03 header-slider02 header-slider02').addClass('header-slider05');
+        removeActiveBtn();
+        $('#slider05').addClass('header-slider__button-active');
+    }
 
 
-    $('.header-slider__button').on('click', event => {
-        $('.header-slider__button').removeClass('header-slider__button-active')
-    }).on('click', event => {
-        $(event.currentTarget).addClass('header-slider__button-active')
-    });
+    $("#slider01").click(slider01);
+    $("#slider02").click(slider02);
+    $("#slider03").click(slider03);
+    $("#slider04").click(slider04);
+    $("#slider05").click(slider05);
 
 });

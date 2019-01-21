@@ -62,7 +62,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     max-height: 1024px;
@@ -126,6 +126,7 @@ html {
 label,
 #menu {
     display: none;
+    position: relative;
 }
 
 .menu {
@@ -166,12 +167,32 @@ label,
     height: 6px;
 }
 
-input[type="checkbox"]:checked ~ .menu {
+.menu__opened {
+    background-color: #fff;
+    display: block;
+    margin: 6px -44px;
+    width: 57px;
+    height: 11px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    visibility: hidden;
+}
+
+.visible {
     visibility: visible;
 }
 
-input[type="checkbox"]:checked ~ .logo {
-    visibility: none;
+#first-col {
+    transform: rotate(135deg);
+}
+
+#second-col {
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
 }
 
 .header-slider__button-wrapper {
@@ -208,29 +229,37 @@ input[type="checkbox"]:checked ~ .logo {
     position: relative;
     outline: none;
     width: 1.25%;
-    height: 24px;
+    height: 26px;
+}
+input[type=text] {
+  width: 100px;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+input[type=text]:focus {
+  width: 250px;
 }
 
 .search[type="search"] {
     background: none;
     background-image: url(../svg/icon-search.svg);
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
+    background-position: left bottom;
     padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-/*
 .search[type="search"]:focus {
-    transition: width 0.3s ease-out;
-    background-position: left;
+    transition: 350px 0.3s ease-out;
     border: 1px solid #998675;
-    border-radius: 17%;
+    border-radius: 3px;
+    background-color: #998675;
     color: #fff;
     position: absolute;
-    top: 0;
+    bottom: -30px;
     right: 0;
+    width: 300%;
 }
-*/
 
 
 .header-slider__main {
@@ -690,7 +719,7 @@ input[type="checkbox"]:checked ~ .logo {
 }
 
 .video {
-    background: linear-gradient(135deg, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+    background: linear-gradient(135deg, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(17, 17, 17, 1) 60%, rgba(43, 43, 43, 1) 76%, rgba(28, 28, 28, 1) 91%, rgba(19, 19, 19, 1) 100%);
     position: relative;
     width: 100%;
     height: 80vh;
@@ -763,7 +792,7 @@ input[type="checkbox"]:checked ~ .logo {
     width: 100%;
     height: 100%;
     text-align: center;
-    
+
 }
 
 .video__poster-content h3 {
@@ -806,7 +835,7 @@ input[type="checkbox"]:checked ~ .logo {
 
 .mobile img {
     display: block;
-    
+
 }
 
 .mobile__content {
@@ -945,7 +974,7 @@ input[type="checkbox"]:checked ~ .logo {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    
+
 }
 
 .recent-posts__post {
@@ -1323,9 +1352,9 @@ input[type="checkbox"]:checked ~ .logo {
 
 @media screen and (max-width: 823px) {
     html {
-        font-size: 14px;    
+        font-size: 14px;
     }
-    
+
     .header-slider__main,
     .header-slider__buttons,
     .cart,
@@ -1336,11 +1365,11 @@ input[type="checkbox"]:checked ~ .logo {
     .footer-content {
         display: none;
     }
-    
+
     .header-slider {
         height: auto;
     }
-    
+
     label {
         display: block;
         position: absolute;
@@ -1350,34 +1379,36 @@ input[type="checkbox"]:checked ~ .logo {
 
     .menu {
         visibility: hidden;
-        width: 80%;
+        width: 90%;
         margin-left: -20%;
         position: relative;
+        text-align: center;
+        font-size: 24px;
     }
-    
+
     .menu ul {
         background: url(../img/slider01.jpg);
         flex-direction: column;
         position: absolute;
         top: -30px;
-        left: 60%;
-        width: 40%;
+        left: 2%;
+        width: 90%;
     }
-    
+
     .video {
         max-height: 355px;
     }
-    
+
     .video__button {
         top: 40px;
         left: 44%;
     }
-    
+
     .video__poster-content h3 {
         margin: 154px 0 15px;
     }
-    
-    .video__poster-content p  {
+
+    .video__poster-content p {
         margin: 0 15.625%;
     }
 }
@@ -1386,7 +1417,7 @@ input[type="checkbox"]:checked ~ .logo {
     .mobile__content {
         width: 100%;
     }
-    
+
     .mobile img {
         height: 316px;
         width: 211.5px;
@@ -1397,48 +1428,39 @@ input[type="checkbox"]:checked ~ .logo {
     html {
         font-size: 12px;
     }
-    
+
     .purchase__button {
         line-height: 25px;
     }
-    
+
     .video__button {
         height: 70px;
         width: 70px;
     }
-    
+
     .video__button-svg {
         height: 55px;
         width: 55px;
     }
-    
+
     .video__poster-content h3 {
         margin: 124px 0 15px;
     }
-    
-    .video__poster-content p  {
+
+    .video__poster-content p {
         margin: 0 10.625%;
     }
-    
+
     .mobile img {
         height: 316px;
         width: 211.5px;
     }
-    
+
     .mobile__content {
         width: 100%;
     }
-    
+
     .mobile__content p {
         margin-bottom: 1.84%;
     }
 }
-
-
-/*
-// использовать для картинок latest projects recent postsИ когда разделы 3 на 1, чтобы было 2 на 2
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .gallery-item .thumbnail {
-    width: 95%;
-  }
-}*/
